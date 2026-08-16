@@ -1,5 +1,8 @@
 # KC16 Slack Bot
 
+
+<a href="https://slack.com/app_redirect?app=A0BQH4NPUU9">TRY KC16 SLACK BOT</a>
+
 Hey! This is KC16, a custom Slack bot I built for the Stardance challenge. 
 
 I wrote the bot in Node.js using the `@slack/bolt` framework. Right now, it lives on a Debian container on Hack Club Nest. Getting it to stay online 24/7 was honestly a huge learning curve—I had to figure out how to write a custom `systemd` service just to keep the Node process running in the background so it wouldn't die the second I closed my laptop.
