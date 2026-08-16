@@ -1,7 +1,7 @@
 # KC16 Slack Bot
 
-
-<a href="https://slack.com/app_redirect?app=A0BQH4NPUU9">TRY KC16 SLACK BOT</a> It will show not working, but it will work in few seconds!
+TRY PROJECT HERE ↓
+<a href="https://slack.com/app_redirect?app=A0BQH4NPUU9">TRY KC16 SLACK BOT</a>  It will show not working, but it will work in few seconds!
 
 Hey! This is KC16, a custom Slack bot I built for the Stardance challenge. 
 
