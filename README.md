@@ -10,4 +10,4 @@ The hardest part of this project was definitely dealing with the Slack Socket Mo
 
 It was a ton of config work, but seeing it run flawlessly in the background is super satisfying. 
 
-To test it, just jump into the channel `the-corellian-cathedral` and type `/kc16-ping`!
+To test it, just jump into the channel `#the-corellian-cathedral` and type `/kc16-ping`!
