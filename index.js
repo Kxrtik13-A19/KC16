@@ -25,7 +25,6 @@ app.command('/kc16-help', async ({ command, ack, respond }) => {
     `\`/kc16-help\` - Show this help menu\n` +
     `\`/kc16-catfact\` - Get a random cat fact\n` +
     `\`/kc16-joke\` - Hear a funny joke\n` +
-    `\`/kc16-fortress\` - Check Smart Fortress status\n` +
     `\`/kc16-cybernetics\` - Cybernetics presentation reference\n` +
     `\`/kc16-soccer\` - Random soccer/football fact\n` +
     `\`/kc16-8ball\` - Ask the magic 8-ball a question\n` +
