@@ -1,43 +1,13 @@
-# 🚀 KC16 Slack Bot
+# KC16 Slack Bot
 
-A fully-featured, persistent Slack bot built with Node.js and the Slack Bolt framework. Deployed 24/7 on a Hack Club Nest Linux container.
+Hey! This is KC16, a custom Slack bot I built for the Stardance challenge. 
 
-This project was built as part of the **Hack Club Stardance** challenge. It utilizes external APIs via Axios to fetch real-time data and handles custom logic for 10 unique slash commands.
+I wrote the bot in Node.js using the `@slack/bolt` framework. Right now, it lives on a Debian container on Hack Club Nest. Getting it to stay online 24/7 was honestly a huge learning curve—I had to figure out how to write a custom `systemd` service just to keep the Node process running in the background so it wouldn't die the second I closed my laptop.
 
----
+It responds to a bunch of custom slash commands that I manually registered in the Slack API dashboard (which took way too much time lol). Some of the fun ones you can try are `/kc16-8ball`, `/kc16-joke`, `/kc16-ping`, and `/kc16-catfact`. 
 
-## 🛠️ Tech Stack
-* **Language:** JavaScript (Node.js)
-* **Framework:** `@slack/bolt` (Socket Mode)
-* **HTTP Client:** `axios` (for API fetching)
-* **Infrastructure:** Hosted on [Hack Club Nest](https://nest.hackclub.com/) (Debian Linux)
-* **Process Management:** `systemd` (runs as a 24/7 background service)
+The hardest part of this project was definitely dealing with the Slack Socket Mode connection. I kept getting `UND_ERR_CONNECT_TIMEOUT` errors where the bot would just randomly ignore people because the network connection went stale. I ended up fixing it by tinkering with the systemd service to clear out the dead network connections and restart.
 
----
+It was a ton of config work, but seeing it run flawlessly in the background is super satisfying. 
 
-## ⚡ Features & Commands
-
-KC16 is equipped with 10 slash commands that range from utility and API integrations to custom project references.
-
-| Command | Action / Description |
-| :--- | :--- |
-| `/kc16-ping` | Checks bot latency and server status. |
-| `/kc16-help` | Displays a list of all available commands for the bot. |
-| `/kc16-catfact` | Retrieves and displays a random interesting cat fact. |
-| `/kc16-joke` | Fetches and delivers a random two-part joke. |
-| `/kc16-cybernetics` | Loads quick reference notes for the AI & Robotics presentation. |
-| `/kc16-soccer` | Delivers a random soccer or football trivia fact. |
-| `/kc16-8ball` | Ask the Magic 8-Ball a yes/no question. |
-| `/kc16-dog` | Fetches a random dog photo from the Dog API. |
-| `/kc16-roll` | Rolls a standard 6-sided die using Math logic. |
-
----
-
-## 💻 Local Development Setup
-
-Want to run this bot locally? Follow these steps:
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/Kxrtik13-A19/KC16.git](https://github.com/Kxrtik13-A19/KC16.git)
-cd KC16
+To test it, just jump into the channel and type `/kc16-ping`!
